@@ -3,7 +3,7 @@
 Welcome to my personal portfolio repository! This is a modern, responsive, and interactive web application built to showcase my skills, experience, and projects as a Full Stack Web Developer.
 
 ## 🚀 Live Demo
-*(You can add your deployed link here)*
+[https://sumanth-portfolio-psi.vercel.app/](https://sumanth-portfolio-psi.vercel.app/)
 
 ## 🛠️ Technologies Used
 - **Frontend Framework:** React (Vite)
