@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FF2A2A;
+  --color-dark: #111111;
+}
+
+:root {
+  --bg-primary: #111111;
+  --bg-secondary: #1a1a1a;
+  --accent-primary: #FF2A2A;
+  --text-primary: #ffffff;
+  --text-secondary: #D4D4D4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar during preloader if needed, we can toggle a class on body */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(17, 17, 17, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  color: transparent;
+}
+
+.text-outline-dark {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
+  color: transparent;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF2A2A;
+}
+
+/* Water fill animation keyframes can be handled by Framer Motion, but clip-path is useful */
+
+.premium-text-gradient {
+  background: linear-gradient(
+    to right,
+    #111111 0%,
+    #444444 10%,
+    #111111 20%,
+    #111111 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine-dark 4s linear infinite;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.9);
+  filter: drop-shadow(0px 15px 25px rgba(0,0,0,0.4));
+}
+
+@keyframes shine-dark {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
